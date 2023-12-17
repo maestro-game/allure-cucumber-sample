@@ -6,7 +6,7 @@ import io.cucumber.java.en.When;
 
 import java.util.Random;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 /**
  * @author eroshenkoam (Artem Eroshenko).
@@ -42,6 +42,11 @@ public class WebSteps {
     @Then("I should see issue with label title {string}")
     public void labelsShouldContainsNoteWithText(final String title) {
         maybeThrowAssertionException(title);
+    }
+
+    @Then("I should see title")
+    public void titleShouldBeSeen(final String text) {
+        fail("Title wasn't displayed!");
     }
 
     @Then("I should not see note with content {string}")
